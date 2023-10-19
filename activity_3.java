@@ -34,7 +34,7 @@ public class Department {
         // Replaced int p with boolean employeeCheck
         boolean employeeCheck = false;
 
-	    for (int i = 0; i < this.employee.size(); i++){
+	for (int i = 0; i < this.employee.size(); i++) {
             // Changed check to currentEmployeeID (and made it an int)
             int currentEmployeeID = this.employee.get(i);
             if (currentEmployeeID == employeeID) {
