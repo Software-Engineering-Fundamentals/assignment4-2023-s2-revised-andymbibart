@@ -30,25 +30,29 @@ public class Department {
     }
 
     
-    public boolean checkEmployee(int eID) {
+    public boolean checkEmployee(int employeeID) { // Changed eID to employeeID
+        // Replaced int p with boolean employeeCheck
+        boolean employeeCheck = false;
 
-	int p=0;
-	for (int i = 0; i < this.employee.size(); i++){
-check=this.employee.get(i);
-            if (check==eID) {
-                p=1;
+	    for (int i = 0; i < this.employee.size(); i++){
+            // Changed check to currentEmployeeID (and made it an int)
+            int currentEmployeeID = this.employee.get(i);
+            if (currentEmployeeID == employeeID) {
+                employeeCheck = true;
+                // Added a break to stop for loop if employee was found
+                break;
             }
         }
 
-        if (p==1)
-{
-System.out.println("Employee exists");
-return true;
-}
-else{
-System.out.println("Employee doesn't exists");
-return false;
+        // boolean employeeCheck lessens required code
+        if (employeeCheck) {
+            System.out.println("Employee exists");
+        }
+        else {
+            System.out.println("Employee doesn't exists");
 	    }
+        
+        return employeeCheck;
     }
 
     
